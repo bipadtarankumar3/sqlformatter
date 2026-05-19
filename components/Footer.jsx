@@ -1,0 +1,133 @@
+'use client';
+
+import Link from 'next/link';
+import { Terminal, AlertCircle } from 'lucide-react';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    tools: [
+      { name: 'SQL Formatter', path: '/formatter' },
+      { name: 'SQL Minifier', path: '/minifier' },
+      { name: 'SQL Validator', path: '/validator' },
+      { name: 'Query Analyzer', path: '/analyzer' },
+    ],
+    resources: [
+      { name: 'Cheat Sheet', path: '/cheatsheet' },
+      { name: 'Keywords Explorer', path: '/keywords' },
+      { name: 'Query Templates', path: '/examples' },
+      { name: 'Developer Blog', path: '/blog' },
+    ],
+    company: [
+      { name: 'About Us', path: '/about' },
+      { name: 'Contact', path: '/contact' },
+    ],
+    legal: [
+      { name: 'Privacy Policy', path: '/privacy' },
+      { name: 'Terms of Service', path: '/terms' },
+    ],
+  };
+
+  return (
+    <footer className="border-t border-dark-border dark:border-white/5 bg-white/20 dark:bg-[#070a10]/40 backdrop-blur-md pt-16 pb-8 transition-colors duration-300">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
+        
+        {/* TOP ROW GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-dark-border dark:border-white/5">
+          
+          {/* Brand Info */}
+          <div className="col-span-2 space-y-4">
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-purple text-white shadow-md">
+                <span className="font-mono font-black text-xs">SQL</span>
+              </div>
+              <span className="font-sans font-black text-sm tracking-tight text-gray-900 dark:text-white">
+                SQL BEAST
+              </span>
+            </Link>
+            <p className="text-xs text-gray-500 dark:text-gray-400 max-w-sm leading-relaxed">
+              SQL Beast is a modern developer-focused suite for formatting, compressing, validating, and analyzing SQL statements. Built for database engineers and fullstack developers who demand visual clarity and high-performance tools.
+            </p>
+            <div className="flex items-center gap-3">
+              <a href="https://github.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors" aria-label="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors" aria-label="Twitter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </a>
+              <a href="https://discord.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors" aria-label="Discord">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Links Column: Tools */}
+          <div>
+            <h3 className="text-[10px] font-bold text-brand-primary uppercase tracking-wider mb-4">SQL Suite</h3>
+            <ul className="space-y-2.5">
+              {footerLinks.tools.map((link) => (
+                <li key={link.path}>
+                  <Link href={link.path} className="text-xs text-gray-500 hover:text-brand-primary dark:text-gray-400 dark:hover:text-brand-primary transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Links Column: Resources */}
+          <div>
+            <h3 className="text-[10px] font-bold text-brand-primary uppercase tracking-wider mb-4">Resources</h3>
+            <ul className="space-y-2.5">
+              {footerLinks.resources.map((link) => (
+                <li key={link.path}>
+                  <Link href={link.path} className="text-xs text-gray-500 hover:text-brand-primary dark:text-gray-400 dark:hover:text-brand-primary transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Links Column: Legal & Company */}
+          <div>
+            <h3 className="text-[10px] font-bold text-brand-primary uppercase tracking-wider mb-4">Support & Legal</h3>
+            <ul className="space-y-2.5">
+              {[...footerLinks.company, ...footerLinks.legal].map((link) => (
+                <li key={link.path}>
+                  <Link href={link.path} className="text-xs text-gray-500 hover:text-brand-primary dark:text-gray-400 dark:hover:text-brand-primary transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        {/* BOTTOM ROW */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8">
+          
+          {/* Copyright */}
+          <div className="text-[10px] text-gray-500 dark:text-gray-400">
+            &copy; {currentYear} SQL Beast. Created with ♥ for database architects and backend engineering teams.
+          </div>
+
+          {/* Live Operational Status heartbeat */}
+          <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-dark-border dark:border-white/5 bg-black/5 dark:bg-white/[0.02]">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-emerald opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-emerald"></span>
+            </span>
+            <span className="text-[9px] font-mono font-bold tracking-wide text-brand-emerald uppercase">
+              All Systems Operational
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+  );
+}
