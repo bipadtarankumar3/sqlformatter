@@ -1,7 +1,12 @@
-'use client';
-
 import SectionHeading from '@/components/SectionHeading';
-import { ShieldCheck, Info } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { getMetadata } from '@/utils/seo';
+
+export const metadata = getMetadata({
+  title: 'Privacy Policy - SQL Beast',
+  description: 'Understand how SQL Beast handles your data. 100% offline, local browser processing, no server connections.',
+  path: '/privacy',
+});
 
 export default function PrivacyPolicy() {
   return (

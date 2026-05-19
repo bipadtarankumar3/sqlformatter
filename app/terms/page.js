@@ -1,7 +1,11 @@
-'use client';
-
 import SectionHeading from '@/components/SectionHeading';
-import { ShieldCheck, Info } from 'lucide-react';
+import { getMetadata } from '@/utils/seo';
+
+export const metadata = getMetadata({
+  title: 'Terms of Service - SQL Beast',
+  description: 'Read the terms of use for SQL Beast. Entirely free, open-source, client-side SQL utilities.',
+  path: '/terms',
+});
 
 export default function TermsOfService() {
   return (

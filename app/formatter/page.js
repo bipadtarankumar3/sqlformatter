@@ -1,6 +1,11 @@
-'use client';
-
 import FormatterWidget from '@/components/FormatterWidget';
+import { getMetadata } from '@/utils/seo';
+
+export const metadata = getMetadata({
+  title: 'SQL Formatter & Beautifier - Clean SQL Scripts Instantly',
+  description: 'Format, beautify, and align SQL queries online. Supports PostgreSQL, MySQL, SQLite, Oracle, and SQL Server dialects. 100% private and client-side.',
+  path: '/formatter',
+});
 
 export default function Formatter() {
   return (

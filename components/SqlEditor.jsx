@@ -133,6 +133,7 @@ export default function SqlEditor({
           {actions.includes('wrap') && (
             <button
               onClick={() => setWordWrap(!wordWrap)}
+              suppressHydrationWarning
               className={`p-1 sm:p-1.5 rounded-lg border text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-205 cursor-pointer transition-all ${
                 wordWrap 
                   ? 'border-brand-primary/30 bg-brand-primary/10 text-brand-primary' 
@@ -152,10 +153,12 @@ export default function SqlEditor({
                 type="file"
                 accept=".sql,.txt"
                 onChange={handleFileUpload}
+                suppressHydrationWarning
                 className="hidden"
               />
               <button
                 onClick={handleUploadClick}
+                suppressHydrationWarning
                 className="p-1 sm:p-1.5 rounded-lg border border-slate-200 dark:border-white/5 hover:bg-slate-100 dark:hover:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 cursor-pointer transition-all"
                 title="Upload SQL File"
               >
@@ -168,6 +171,7 @@ export default function SqlEditor({
           {actions.includes('clear') && !readOnly && onClear && (
             <button
               onClick={onClear}
+              suppressHydrationWarning
               className="p-1 sm:p-1.5 rounded-lg border border-slate-200 dark:border-white/5 hover:bg-rose-50 dark:hover:bg-brand-rose/20 text-slate-500 dark:text-slate-400 hover:text-brand-rose cursor-pointer transition-all"
               title="Clear Editor"
             >
@@ -180,6 +184,7 @@ export default function SqlEditor({
             <button
               onClick={handleDownload}
               disabled={!value}
+              suppressHydrationWarning
               className="p-1 sm:p-1.5 rounded-lg border border-slate-200 dark:border-white/5 hover:bg-slate-100 dark:hover:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
               title="Download SQL File"
             >
@@ -192,6 +197,7 @@ export default function SqlEditor({
             <button
               onClick={handleCopy}
               disabled={!value}
+              suppressHydrationWarning
               className="p-1 sm:p-1.5 rounded-lg border border-slate-200 dark:border-white/5 hover:bg-slate-100 dark:hover:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
               title="Copy to Clipboard"
             >
@@ -243,6 +249,7 @@ export default function SqlEditor({
               onScroll={handleScroll}
               placeholder={placeholder}
               spellCheck={false}
+              suppressHydrationWarning
               className={`absolute inset-0 p-3 sm:p-5 bg-transparent font-mono text-xs sm:text-sm leading-5 sm:leading-6 outline-none resize-none overflow-auto editor-textarea text-left ${
                 wordWrap ? 'whitespace-pre-wrap break-all' : 'whitespace-pre'
               } ${value ? 'text-transparent' : 'text-slate-800 dark:text-slate-100'}`}

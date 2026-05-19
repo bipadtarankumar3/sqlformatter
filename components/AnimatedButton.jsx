@@ -48,6 +48,7 @@ export default function AnimatedButton({
       type={type}
       onClick={onClick}
       disabled={disabled}
+      suppressHydrationWarning
       whileHover={{ scale: disabled ? 1 : 1.025 }}
       whileTap={{ scale: disabled ? 1 : 0.975 }}
       className={`${baseStyles} ${variants[variant]} ${className}`}
