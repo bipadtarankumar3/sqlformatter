@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full glass-panel border-b border-dark-border dark:border-white/5 transition-all">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 h-16 flex items-center justify-between">
-        
+
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2 group cursor-pointer select-none">
           <div className="relative flex items-center justify-center w-10 h-10 transition-transform duration-300 group-hover:scale-105 rounded-xl overflow-hidden shadow-lg shadow-brand-primary/20 bg-[#07090e]">
@@ -47,11 +47,10 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`relative px-3.5 py-2 rounded-lg text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer ${
-                  isActive 
-                    ? 'text-brand-primary' 
+                className={`relative px-3.5 py-2 rounded-lg text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer ${isActive
+                    ? 'text-brand-primary'
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-black/5 dark:hover:bg-white/[0.02]'
-                }`}
+                  }`}
               >
                 {link.name}
                 {isActive && (
@@ -106,16 +105,17 @@ export default function Navbar() {
           >
             <Search size={16} />
           </button>
-          
-          <ThemeSwitcher />
-          
-          {/* <button
+
+          {/* <ThemeSwitcher /> */}
+
+          <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            suppressHydrationWarning
             className="p-2 rounded-lg border border-dark-border dark:border-white/10 bg-white/5 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer transition-all"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
-          </button> */}
+          </button>
         </div>
 
       </div>
@@ -138,11 +138,10 @@ export default function Navbar() {
                     key={link.path}
                     href={link.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
-                      isActive 
-                        ? 'bg-brand-primary/10 text-brand-primary border-l-4 border-brand-primary pl-3' 
+                    className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${isActive
+                        ? 'bg-brand-primary/10 text-brand-primary border-l-4 border-brand-primary pl-3'
                         : 'text-gray-600 dark:text-gray-400 hover:bg-black/5 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-gray-100'
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>
