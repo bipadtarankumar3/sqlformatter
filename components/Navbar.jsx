@@ -22,6 +22,7 @@ export default function Navbar() {
     { name: 'Keywords', path: '/keywords' },
     { name: 'Examples', path: '/examples' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Services', path: 'https://tools.orbytara.com/services' },
   ];
 
   return (
@@ -30,13 +31,10 @@ export default function Navbar() {
 
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2 group cursor-pointer select-none">
-          <div className="relative flex items-center justify-center w-10 h-10 transition-transform duration-300 group-hover:scale-105 rounded-xl overflow-hidden shadow-lg shadow-brand-primary/20 bg-[#07090e]">
-            <img src="/logo.png" alt="SQL Beast Logo" className="w-full h-full object-cover" />
+          <div className="relative flex items-center justify-center w-10 h-10 transition-transform duration-300 group-hover:scale-105 rounded-xl overflow-hidden shadow-lg shadow-brand-primary/20 bg-transparent">
+            <img src="/logo.png" alt="SQL Beast Logo" className="w-full h-full object-cover invert dark:invert-0 hue-rotate-180 dark:hue-rotate-0 contrast-125 dark:contrast-100 saturate-150 dark:saturate-100" />
             <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
-          <span className="font-sans font-black text-base tracking-tight bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent group-hover:text-brand-primary transition-all duration-300">
-            SQL BEAST
-          </span>
         </Link>
 
         {/* DESKTOP NAV LINKS */}

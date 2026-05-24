@@ -18,6 +18,7 @@ export default function Footer() {
       { name: 'Keywords Explorer', path: '/keywords' },
       { name: 'Query Templates', path: '/examples' },
       { name: 'Developer Blog', path: '/blog' },
+      { name: 'Services', path: 'https://tools.orbytara.com/services' },
     ],
     company: [
       { name: 'About Us', path: '/about' },
@@ -39,12 +40,11 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-purple text-white shadow-md">
-                <span className="font-mono font-black text-xs">SQL</span>
-              </div>
-              <span className="font-sans font-black text-sm tracking-tight text-gray-900 dark:text-white">
-                SQL BEAST
-              </span>
+              <img 
+                src="/logo.png" 
+                alt="SQL Beast Logo" 
+                className="w-10 h-10 rounded-xl object-contain shadow-md transition-all duration-300 group-hover:scale-105 invert dark:invert-0 hue-rotate-180 dark:hue-rotate-0 contrast-125 dark:contrast-100 saturate-150 dark:saturate-100"
+              />
             </Link>
             <p className="text-xs text-gray-500 dark:text-gray-400 max-w-sm leading-relaxed">
               SQL Beast is a modern developer-focused suite for formatting, compressing, validating, and analyzing SQL statements. Built for database engineers and fullstack developers who demand visual clarity and high-performance tools.
