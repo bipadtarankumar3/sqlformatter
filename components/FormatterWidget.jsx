@@ -185,64 +185,66 @@ function FormatterContent({ hideHeader = false }) {
       )}
 
       {/* 2. Options Toolbar (Pill Design) */}
-      <div className="relative rounded-2xl sm:rounded-[2rem] bg-white/70 dark:bg-[#0b0e14]/60 backdrop-blur-xl border border-slate-200/80 dark:border-white/5 p-2 sm:p-3 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-xl mt-4 flex flex-col xl:flex-row items-center justify-between gap-3 w-full">
+      <div className="relative rounded-2xl sm:rounded-[2rem] bg-white/70 dark:bg-[#0b0e14]/60 backdrop-blur-xl border border-slate-200/80 dark:border-white/5 p-3 sm:p-3 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-xl mt-4 flex flex-col xl:flex-row items-center justify-between gap-3 w-full">
         
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 w-full xl:w-auto">
           <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-wider select-none px-2 hidden sm:flex">
             <Settings size={14} className="animate-spin-slow" />
           </div>
 
-          <select
-            value={dialect}
-            onChange={(e) => setDialect(e.target.value)}
-            suppressHydrationWarning
-            className="text-xs font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full border border-slate-200/80 dark:border-white/10 bg-slate-50/50 dark:bg-white/5 text-slate-700 dark:text-slate-200 outline-none hover:bg-white dark:hover:bg-white/10 hover:border-indigo-300 dark:hover:border-white/20 focus:ring-2 focus:ring-indigo-500/20 transition-all shadow-sm cursor-pointer"
-          >
-            <option value="MySQL">MySQL</option>
-            <option value="PostgreSQL">PostgreSQL</option>
-            <option value="SQLite">SQLite</option>
-            <option value="SQL Server">SQL Server</option>
-            <option value="MariaDB">MariaDB</option>
-            <option value="Oracle">Oracle</option>
-          </select>
+          <div className="grid grid-cols-2 sm:flex sm:flex-row gap-2 w-full sm:w-auto">
+            <select
+              value={dialect}
+              onChange={(e) => setDialect(e.target.value)}
+              suppressHydrationWarning
+              className="w-full sm:w-auto text-xs font-bold px-3 py-2 sm:py-2.5 rounded-xl sm:rounded-full border border-slate-200/80 dark:border-white/10 bg-slate-50/50 dark:bg-white/5 text-slate-700 dark:text-slate-200 outline-none hover:bg-white dark:hover:bg-white/10 hover:border-indigo-300 dark:hover:border-white/20 focus:ring-2 focus:ring-indigo-500/20 transition-all shadow-sm cursor-pointer"
+            >
+              <option value="MySQL">MySQL</option>
+              <option value="PostgreSQL">PostgreSQL</option>
+              <option value="SQLite">SQLite</option>
+              <option value="SQL Server">SQL Server</option>
+              <option value="MariaDB">MariaDB</option>
+              <option value="Oracle">Oracle</option>
+            </select>
 
-          <select
-            value={indentSize}
-            onChange={(e) => {
-              setUseTabs(e.target.value === 'tabs');
-              if (e.target.value !== 'tabs') {
-                setIndentSize(Number(e.target.value));
-              }
-            }}
-            suppressHydrationWarning
-            className="text-xs font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full border border-slate-200/80 dark:border-white/10 bg-slate-50/50 dark:bg-white/5 text-slate-700 dark:text-slate-200 outline-none hover:bg-white dark:hover:bg-white/10 hover:border-indigo-300 dark:hover:border-white/20 focus:ring-2 focus:ring-indigo-500/20 transition-all shadow-sm cursor-pointer"
-          >
-            <option value={2}>2 Spaces</option>
-            <option value={4}>4 Spaces</option>
-            <option value="tabs">Tabs</option>
-          </select>
+            <select
+              value={indentSize}
+              onChange={(e) => {
+                setUseTabs(e.target.value === 'tabs');
+                if (e.target.value !== 'tabs') {
+                  setIndentSize(Number(e.target.value));
+                }
+              }}
+              suppressHydrationWarning
+              className="w-full sm:w-auto text-xs font-bold px-3 py-2 sm:py-2.5 rounded-xl sm:rounded-full border border-slate-200/80 dark:border-white/10 bg-slate-50/50 dark:bg-white/5 text-slate-700 dark:text-slate-200 outline-none hover:bg-white dark:hover:bg-white/10 hover:border-indigo-300 dark:hover:border-white/20 focus:ring-2 focus:ring-indigo-500/20 transition-all shadow-sm cursor-pointer"
+            >
+              <option value={2}>2 Spaces</option>
+              <option value={4}>4 Spaces</option>
+              <option value="tabs">Tabs</option>
+            </select>
+          </div>
 
           <select
             value={keywordCase}
             onChange={(e) => setKeywordCase(e.target.value)}
             suppressHydrationWarning
-            className="text-xs font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full border border-slate-200/80 dark:border-white/10 bg-slate-50/50 dark:bg-white/5 text-slate-700 dark:text-slate-200 outline-none hover:bg-white dark:hover:bg-white/10 hover:border-indigo-300 dark:hover:border-white/20 focus:ring-2 focus:ring-indigo-500/20 transition-all shadow-sm cursor-pointer"
+            className="w-full sm:w-auto text-xs font-bold px-3 py-2 sm:py-2.5 rounded-xl sm:rounded-full border border-slate-200/80 dark:border-white/10 bg-slate-50/50 dark:bg-white/5 text-slate-700 dark:text-slate-200 outline-none hover:bg-white dark:hover:bg-white/10 hover:border-indigo-300 dark:hover:border-white/20 focus:ring-2 focus:ring-indigo-500/20 transition-all shadow-sm cursor-pointer"
           >
             <option value="upper">UPPERCASE</option>
             <option value="lower">lowercase</option>
             <option value="preserve">Preserve Case</option>
           </select>
 
-          <div className="flex items-center gap-3 sm:gap-4 px-3 sm:px-4 bg-slate-50/50 dark:bg-white/5 py-2 sm:py-2.5 rounded-full border border-slate-200/80 dark:border-white/10">
-            <label className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-450 uppercase tracking-wider cursor-pointer hover:text-indigo-500 transition-colors">
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 px-3 sm:px-4 w-full sm:w-auto bg-slate-50/50 dark:bg-white/5 py-2 sm:py-2.5 rounded-xl sm:rounded-full border border-slate-200/80 dark:border-white/10">
+            <label className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-300 uppercase tracking-wider cursor-pointer hover:text-indigo-500 transition-colors">
               <input type="checkbox" checked={compactMode} onChange={(e) => setCompactMode(e.target.checked)} suppressHydrationWarning className="w-3.5 h-3.5 rounded text-indigo-500 border-slate-300 focus:ring-indigo-500/30 cursor-pointer" />
               Compact
             </label>
-            <label className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-450 uppercase tracking-wider cursor-pointer hover:text-indigo-500 transition-colors">
+            <label className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-300 uppercase tracking-wider cursor-pointer hover:text-indigo-500 transition-colors">
               <input type="checkbox" checked={preserveComments} onChange={(e) => setPreserveComments(e.target.checked)} suppressHydrationWarning className="w-3.5 h-3.5 rounded text-indigo-500 border-slate-300 focus:ring-indigo-500/30 cursor-pointer" />
               Comments
             </label>
-            <label className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-450 uppercase tracking-wider cursor-pointer hover:text-indigo-500 transition-colors">
+            <label className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-300 uppercase tracking-wider cursor-pointer hover:text-indigo-500 transition-colors">
               <input type="checkbox" checked={autoFormat} onChange={(e) => setAutoFormat(e.target.checked)} suppressHydrationWarning className="w-3.5 h-3.5 rounded text-indigo-500 border-slate-300 focus:ring-indigo-500/30 cursor-pointer" />
               Auto
             </label>

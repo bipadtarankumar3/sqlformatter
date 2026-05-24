@@ -7,9 +7,6 @@ export default function GradientBackground() {
 
   useEffect(() => {
     setMounted(true);
-    const root = window.document.documentElement;
-    root.classList.add('light');
-    root.classList.remove('dark');
   }, []);
 
   if (!mounted) return null;

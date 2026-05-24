@@ -82,7 +82,7 @@ export default function Navbar() {
           </button>
 
           {/* Theme switcher */}
-          {/* <ThemeSwitcher /> */}
+          <ThemeSwitcher />
 
           <Link
             href="/formatter"
@@ -104,7 +104,7 @@ export default function Navbar() {
             <Search size={16} />
           </button>
 
-          {/* <ThemeSwitcher /> */}
+          <ThemeSwitcher />
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
