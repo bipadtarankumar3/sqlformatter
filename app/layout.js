@@ -7,6 +7,8 @@ import CommandPalette from '@/components/CommandPalette';
 import GradientBackground from '@/components/GradientBackground';
 import ReduxProvider from '@/components/ReduxProvider';
 import { getMetadata } from '@/utils/seo';
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -31,6 +33,8 @@ export const metadata = getMetadata({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.variable} ${jetbrains.variable}`}>
+      
+      
       <body className="antialiased font-sans flex flex-col min-h-screen relative text-gray-900 dark:text-gray-100 bg-white dark:bg-[#07090e] selection:bg-brand-primary/30 transition-colors duration-300">
         <ReduxProvider>
           {/* Shifting Mesh Backdrops */}
@@ -53,6 +57,7 @@ export default function RootLayout({ children }) {
           {/* Ctrl+K Search Launcher */}
           <CommandPalette />
         </ReduxProvider>
+        <GoogleAnalytics gaId="G-MQEWLCWPRN" />
       </body>
     </html>
   );
