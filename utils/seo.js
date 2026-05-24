@@ -7,7 +7,7 @@ export const siteConfig = {
   title: 'SQL Beast - Premium SQL Formatter, Beautifier & Query Analyzer',
   description: 'The ultimate online developer-focused SQL platform. Format, beautify, minify, validate, and analyze your SQL queries instantly. Supports MySQL, PostgreSQL, SQLite, MariaDB, and Oracle.',
   url: 'https://sqlbeast.dev',
-  ogImage: 'https://sqlbeast.dev/og-image.png',
+  ogImage: '/logo.png',
   twitterHandle: '@sqlbeast',
 };
 
@@ -79,6 +79,9 @@ export const getMetadata = ({
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
+    },
+    icons: {
+      icon: '/logo.png',
     },
   };
 
