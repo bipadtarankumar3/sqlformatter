@@ -22,7 +22,7 @@ export default function Navbar() {
     { name: 'Keywords', path: '/keywords' },
     { name: 'Examples', path: '/examples' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Services', path: 'https://tools.orbytara.com/services' },
+    { name: 'Services', path: 'https://tools.Revoxera.com/services' },
   ];
 
   return (
