@@ -19,10 +19,9 @@ export default function Navbar() {
     { name: 'Validator', path: '/validator' },
     { name: 'Analyzer', path: '/analyzer' },
     { name: 'Cheat Sheet', path: '/cheatsheet' },
-    { name: 'Keywords', path: '/keywords' },
-    { name: 'Examples', path: '/examples' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Services', path: 'https://tools.Revoxera.com/services' },
+    { name: 'Guides', path: '/guides/sql-formatting-standards' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
