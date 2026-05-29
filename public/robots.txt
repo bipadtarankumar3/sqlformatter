@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://sqlbeast.dev/sitemap.xml
+Sitemap: https://sqlformatter.revoxera.com/sitemap.xml

@@ -5,7 +5,7 @@ export const metadata = {
   title: 'How to Prevent SQL Injection Attacks',
   description: 'Learn the principles of SQL injection (SQLi) prevention. Understand parametrized queries, prepared statements, and input sanitation best practices.',
   alternates: {
-    canonical: 'https://sqlbeast.dev/guides/preventing-sql-injection',
+    canonical: 'https://sqlformatter.revoxera.com/guides/preventing-sql-injection',
   },
 };
 

@@ -49,10 +49,10 @@ It is tempting to write \`SELECT * FROM users\` during prototyping. But in produ
 
 \`\`\`sql
 -- Bad: Pulling entire row structure
-SELECT * FROM users WHERE email = 'dev@sqlbeast.dev';
+SELECT * FROM users WHERE email = 'dev@revoxera.com';
 
 -- Good: Fetching only the exact required columns
-SELECT user_id, username, status FROM users WHERE email = 'dev@sqlbeast.dev';
+SELECT user_id, username, status FROM users WHERE email = 'dev@revoxera.com';
 \`\`\`
 
 ---

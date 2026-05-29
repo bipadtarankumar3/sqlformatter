@@ -59,7 +59,7 @@ export default function ContactClient() {
                 <Mail size={16} className="text-brand-primary shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-gray-800 dark:text-white">Email Address</h4>
-                  <p className="text-[10px]">support@sqlbeast.dev</p>
+                  <p className="text-[10px]">support@revoxera.com</p>
                 </div>
               </div>
               

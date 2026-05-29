@@ -23,7 +23,7 @@ export default function TermsOfService() {
         <section className="space-y-2">
           <h3 className="font-sans font-black text-sm sm:text-base text-gray-900 dark:text-white">1. Acceptance of Terms</h3>
           <p>
-            By accessing or utilizing SQL Beast (located at sqlbeast.dev or running locally), you acknowledge and agree to comply with these Terms of Service and our Privacy Policy. If you do not accept these parameters, please do not use our utilities.
+            By accessing or utilizing SQL Beast (located at sqlformatter.revoxera.com or running locally), you acknowledge and agree to comply with these Terms of Service and our Privacy Policy. If you do not accept these parameters, please do not use our utilities.
           </p>
         </section>
 

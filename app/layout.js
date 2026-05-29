@@ -52,11 +52,11 @@ const softwareSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "url": "https://sqlbeast.dev",
+  "url": "https://sqlformatter.revoxera.com",
   "name": "SQL Beast",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://sqlbeast.dev/cheatsheet?q={search_term_string}",
+    "target": "https://sqlformatter.revoxera.com/cheatsheet?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };
@@ -128,7 +128,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <link rel="canonical" href="https://sqlbeast.dev" />
+        <link rel="canonical" href="https://sqlformatter.revoxera.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}

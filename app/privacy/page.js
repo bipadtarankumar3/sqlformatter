@@ -64,7 +64,7 @@ export default function PrivacyPolicy() {
         <section className="space-y-2">
           <h3 className="font-sans font-black text-sm sm:text-base text-gray-900 dark:text-white">4. Updates and Inquiries</h3>
           <p>
-            We may review this Privacy Policy from time to time as browser standards or new SQL dialects roll out. For privacy questions or validation checks, please contact our support team at <strong className="text-gray-800 dark:text-gray-200">support@sqlbeast.dev</strong>.
+            We may review this Privacy Policy from time to time as browser standards or new SQL dialects roll out. For privacy questions or validation checks, please contact our support team at <strong className="text-gray-800 dark:text-gray-200">support@revoxera.com</strong>.
           </p>
         </section>
       </div>

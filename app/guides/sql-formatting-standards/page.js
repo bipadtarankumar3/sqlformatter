@@ -5,7 +5,7 @@ export const metadata = {
   title: 'SQL Formatting Standards & Best Practices',
   description: 'Master industry-standard SQL query formatting. Learn when to use uppercase keywords, how to indent nested joins, and write readable database queries.',
   alternates: {
-    canonical: 'https://sqlbeast.dev/guides/sql-formatting-standards',
+    canonical: 'https://sqlformatter.revoxera.com/guides/sql-formatting-standards',
   },
 };
 
